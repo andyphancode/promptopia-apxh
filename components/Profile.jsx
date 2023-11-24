@@ -8,7 +8,7 @@ const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
         <span className='blue_gradient'>{name} Profile</span>
       </h1>
       <p className='desc text-left'>{desc}</p>
-      <div className='mt-5 prompt-layout'>
+      <div className='mt-5 prompt_layout'>
       {data.map((post) => (
         <PromptCard
           key={post._id}
