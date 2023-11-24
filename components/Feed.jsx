@@ -71,10 +71,14 @@ const Feed = () => {
         />
       </form>
 
-      <PromptCardList
-      data={filteredPosts}
-      handleTagClick={handleTagClick}
-      />
+      {searchText ? (
+        <PromptCardList
+          data={filteredPosts}
+          handleTagClick={handleTagClick}
+        />
+      ) : (
+        <PromptCardList data={posts} handleTagClick={handleTagClick} />
+      )}
     </section>
   )
 }
