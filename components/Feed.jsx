@@ -28,7 +28,7 @@ const Feed = () => {
 
   const fetchPosts = async () => {
     console.log("Fetching posts....")
-    const response = await fetch("https://promptopia-apxh.vercel.app/api/prompt", { cache: 'no-store' });
+    const response = await fetch("/api/prompt", { cache: 'no-store' });
     const data = await response.json();
     console.log("Posts fetched", data)
     setAllPosts(data);
