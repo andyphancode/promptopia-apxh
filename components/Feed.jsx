@@ -30,7 +30,7 @@ const Feed = () => {
     console.log("Fetching posts....")
     const response = await fetch("/api/prompt", { cache: 'no-store' });
     const data = await response.json();
-    console.log("Posts fetched", data)
+    console.log("Posts fetched")
     setAllPosts(data);
   };
 
